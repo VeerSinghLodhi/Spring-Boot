@@ -45,6 +45,7 @@ Spring Boot is a Java-based framework that simplifies the development of stand-a
 
 ## 📂 Project Structure
 
+```
 /my-spring-boot-journey
 │── src/main/java/com/example
 │   ├── controller/  # Controllers
@@ -56,4 +57,38 @@ Spring Boot is a Java-based framework that simplifies the development of stand-a
 │   ├── application.properties  # Application Configuration
 │── pom.xml  # Maven Dependencies
 
+```
+
+## 🚀 How to Run
+
+1. Clone this repository:
+```
+git clone https://github.com/VeerSinghLodhi/spring-boot.git
+```
+
+2. Navigate to the project folder:
+```
+cd spring-boot
+```
+
+3. Build and run the application:
+```
+mvn spring-boot:run
+```
+
+4. Open your browser or use Postman to test endpoints:
+```
+http://localhost:8080/api/your-endpoint
+```
+
+## 🎯 Goals
+
+- Build a full-fledged Spring Boot application
+- Learn and implement microservices architecture
+- Deploy Spring Boot applications to cloud platforms
+
+## 📌 Feel free to fork, contribute, or suggest improvements! 😊
+```
+You can copy and paste this into your `README.md` file. Let me know if you need any modifications! 🚀
+```
 
