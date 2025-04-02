@@ -81,5 +81,19 @@
     ________________________________________________________________________
     When you hit http://localhost:8080/welcome, it returns:
     "Welcome, Veer!" as plain text (instead of a view).
+
+
+    Summary:
+    
+          Annotation	                    Purpose
+          
+    @SpringBootApplication	            Marks the main entry point of the Spring Boot application.
+    
+    @Controller	                        Declares a class as a Spring MVC controller.
+    
+    @RequestMapping	                    Maps HTTP requests to handler methods.
+    
+    @ResponseBody	                    Sends the method’s return value as the HTTP response body.
+    
     
 */
