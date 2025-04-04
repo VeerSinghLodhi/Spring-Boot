@@ -40,7 +40,7 @@ ________________________________________________________________________________
         public List<Student getStudentById(@PathVariable int id) {
         return studentLIst.stream().filter(student->student.getId()==id).collect(Collectors.toList());
         }
-        -A GET request to /id returns "One Student Record1".
+        -A GET request to /id returns "One Student Record".
 
 ___________________________________________________________________________________________________________________________________________________
 
@@ -103,11 +103,11 @@ ________________________________________________________________________________
         Annotation	                        Purpose
 -------------------------------------------------------------------------------------------------------------
     @PostMapping	            Handles HTTP POST requests (Create Data)
-    @GetMapping	                Handles HTTP GET requests (Retrieve Data)
+    @GetMapping	             Handles HTTP GET requests (Retrieve Data)
     0@DeleteMapping     	    Handles HTTP DELETE requests (Delete Data)
-    @ResponseBody	            Converts Java object to JSON response
+    @ResponseBody	           Converts Java object to JSON response
     @RequestBody	            Maps HTTP request body to Java object
-    @PathVariable	            Extracts values from URL
+    @PathVariable	           Extracts values from URL
 
 
 ___________________________________________________________________________________________________________________________________________________
@@ -116,12 +116,12 @@ ________________________________________________________________________________
             Spring Boot Annotations vs Database CRUD
 
 
-           Operation |	Database Action | 	HTTP Method |	Spring Annotation             |  Purpose
+           Operation |	Database Action | 	HTTP Method |	Spring Annotation              |  Purpose
 -----------------------------------------------------------------------------------------------------------------------------------------
-            Create	 |      INSERT	    |   POST	    |    @PostMapping	              |  Add a new record to the database
-            Read	 |      SELECT	    |   GET	        |    @GetMapping	              |  Retrieve data from the database
-            Update	 |      UPDATE	    |   PUT/PATCH	|    @PutMapping / @PatchMapping  |  Modify existing records
-            Delete	 |      DELETE	    |   DELETE	    |    @DeleteMapping	              |  Remove a record from the database
+            Create	 |      INSERT	    |   POST	       |    @PostMapping	               |  Add a new record to the database
+            Read	   |      SELECT	    |   GET	        |    @GetMapping	                |  Retrieve data from the database
+            Update	 |      UPDATE	    |   PUT/PATCH  	|    @PutMapping / @PatchMapping |  Modify existing records
+            Delete	 |      DELETE	    |   DELETE	     |    @DeleteMapping	             |  Remove a record from the database
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 
