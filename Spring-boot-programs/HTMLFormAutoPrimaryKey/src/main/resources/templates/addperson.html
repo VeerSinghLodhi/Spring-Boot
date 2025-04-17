@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>add new person</title>
+</head>
+<body>
+    <table>
+      <form method="post" action="formfilled">
+        <td><label for="name">Enter Name</label></td>
+        <td><input type="text" id="name" name="name" required></td>
+        <tr></tr>
+        <td><label for="address">Enter Address</label></td>
+          <td><textarea id="address" name="address" required></textarea></td>
+          <tr></tr>
+          <td><label for="state">Select a state</label></td>
+        <td><select id="state" name="state" required>
+
+          <option>MP</option>
+          <option>UP</option>
+          <option>AP</option>
+        </select></td>
+        <tr></tr>
+       <td><label for="dob">Date of birth</label></td>
+        <td><input type="date" id="dob" name="dob" required></td>
+        <tr></tr>
+        <td><label for="male">Select Gender</label></td>
+        <td><input type="radio" id="male" name="gender" value="male">Male</td>
+        <td><input type="radio" id="female" name="gender" value="female">female</td>
+        <tr></tr>
+        <td>
+        <input type="submit">
+        </td>
+        <td>
+        <input type="reset">
+        </td>
+      </form>
+    </table>
+  <img src="./Images/veer_logo1.png" width="400" height="200">
+</body>
+</html>
