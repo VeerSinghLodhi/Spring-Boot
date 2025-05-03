@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry Data Set Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 100%;
+            max-width: 400px;
+            color: #333;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        form input:focus {
+            outline: none;
+            border-color: #2575fc;
+            box-shadow: 0 0 5px rgba(37, 117, 252, 0.5);
+        }
+
+        form input[type="submit"] {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        form input[type="submit"]:hover {
+            background: linear-gradient(to right, #2575fc, #6a11cb);
+        }
+
+        form input[type="submit"]:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+<form method="post" action="/esavedata">
+    <label for="name">Enter Name</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="phone">Enter Phone No.</label>
+    <input type="number" name="phone" id="phone" required>
+
+    <label for="enquiry_date">Date</label>
+    <input type="date" name="enquiry_date" id="enquiry_date" required>
+
+    <label for="subject">Subject</label>
+    <input type="text" name="subject" id="subject" required>
+
+    <label for="message">Message</label>
+    <input type="text" name="message" id="message" required>
+
+    <label for="status">Status</label>
+    <input type="text" name="status" id="status" required>
+
+    <input type="submit" >
+</form>
+</body>
+</html>

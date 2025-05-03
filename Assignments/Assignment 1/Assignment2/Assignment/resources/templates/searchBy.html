@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+    <style>
+        *{
+          margin:0;
+          padding:0;
+        }
+        input{
+          margin:20px;
+        }
+        table {
+                width: 80%;
+                border-collapse: collapse;
+                margin: 20px auto;
+            }
+            th, td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+            }
+            th {
+              color:white;
+                background-color: teal;
+            }
+    </style>
+</head>
+<body>
+    <form method="post" action="/searchbyid">
+        <label for="enquiryid">Select Enquiry No.</label>
+        <select name="enquiryid" id="enquiryid">
+            <span th:each="lst: ${enquirylist}">
+            <option th:text="${lst.enquiryid}"></option>
+            </span>
+        </select>
+        <input type="submit">
+    </form>
+<div th:if="${enquirylist}">
+    <table>
+
+        <thead>
+        <tr>
+            <th>Enquiry Id</th>
+            <th>Name</th>
+            <th>Phone No.</th>
+            <th>Enquiry Date</th>
+            <th>Subject</th>
+            <th>Message</th>
+            <th>Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="lst : ${enquirylist} ">
+            <td th:text="${lst.enquiryid}"></td>
+            <td th:text="${lst.name}"></td>
+            <td th:text="${lst.phone}"></td>
+            <td th:text="${lst.enquiry_date}"></td>
+            <td th:text="${lst.subject}"></td>
+            <td th:text="${lst.message}"></td>
+            <td th:text="${lst.status}"></td>
+        </tr>
+        </tbody>
+
+    </table>
+</div>
+</body>
+</html>
