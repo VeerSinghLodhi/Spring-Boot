@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Trains</title>
+</head>
+<body>
+<h1>Update Trains</h1>
+    <form method="post" action="/update">
+        <table>
+        <td><label for="tno">Enter Train No.</label></td>
+        <td><input type="text" name="tno" id="tno"></td>
+            <tr>
+                <td><label for="tname">New Train Name</label></td>
+                <td><input type="text" name="tname" id="tname"></td>
+            </tr>
+        <tr>
+            <td><label for="source">New Source</label></td>
+            <td><input type="text" name="source" id="source"></td>
+        </tr>
+        <tr>
+            <td><label for="destination">New Destination</label></td>
+            <td><input type="text" name="destination" id="destination"></td>
+        </tr>
+        <tr>
+            <td> <input type="submit" value="Update"></td>
+        </tr>
+        </table>
+    </form>
+<div th:if="${savemessage}" style="color:blue;">
+    <p th:text=" ${savemessage}"></p>
+</div>
+</body>
+</html>

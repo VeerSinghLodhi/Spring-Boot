@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Trains Data</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+    }
+    input{
+      margin:20px;
+    }
+    table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+          color:white;
+            background-color: teal;
+        }
+  </style>
+</head>
+<body>
+<!--
+  <li th:each="lst : ${trainlist} ">
+  <h4 th:text="${lst.tno}"></h4>
+  <h4 th:text="${lst.tname}"></h4>
+  <h4 th:text="${lst.source}"></h4>
+  <h4 th:text="${lst.destination}"></h4>-->
+<table>
+
+  <thead>
+    <tr>
+       <th>Train No</th>
+      <th>Train Name</th>
+      <th>Source</th>
+      <th>Destination</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="lst : ${trainlist} ">
+      <td th:text="${lst.tno}"></td>
+      <td th:text="${lst.tname}"></td>
+      <td th:text="${lst.source}"></td>
+      <td th:text="${lst.destination}"></td>
+    </tr>
+  </tbody>
+
+</table>
+</body>
+</html>
