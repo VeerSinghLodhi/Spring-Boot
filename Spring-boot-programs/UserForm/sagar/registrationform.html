@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f2f5;
+        }
+
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            width: 48%;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        input[type="reset"] {
+            background-color: #f44336;
+            color: white;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        input[type="reset"]:hover {
+            background-color: #e53935;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .form-footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .form-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<div class="form-container">
+    <h2>Registration Form</h2>
+    <form method="post" action="/saveuser">
+        <label for="name">Enter Name</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="username">Enter Username</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Enter Password</label>
+        <input type="password" name="password" id="password" required>
+
+        <label for="confirmpassword">Re-enter Password</label>
+        <input type="password" name="confirmpassword" id="confirmpassword" required>
+
+        <div class="button-container">
+            <input type="submit" onclick="fun1()" value="Register">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+    <div class="form-footer">
+        <p>Already have an account? <a href="/getloginpage">Login Here</a></p>
+    </div>
+</div>
+
+<script>
+    function fun1() {
+        const password = document.getElementById('password').value;
+        const confirmP = document.getElementById('confirmpassword').value;
+        if(password!=confirmP){
+            alert("Password do not match!");
+            return;
+        }
+        alert("Registration Successfully");
+    }
+</script>
+</body>
+</html>
