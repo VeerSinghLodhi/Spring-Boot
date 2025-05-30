@@ -87,10 +87,7 @@ http://localhost:8080/api/your-endpoint
 - Learn and implement microservices architecture
 - Deploy Spring Boot applications to cloud platforms
 
-## 📌 Feel free to fork, contribute, or suggest improvements! 😊
-```
-You can copy and paste this into your `README.md` file. Let me know if you need any modifications! 🚀
-```
+
 ##
 
 <h3 align="left">Connect with me:</h3>
