@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css}">
+    <title>Job Seeker Registration Form</title>
+  <style>
+    body {
+            background-color: #fffaf0; /* Light beige background */
+        }
+      .form-title{
+            text-align:center;
+            font-weight:bold;
+            color:teal;
+      }
+      .form-card{
+            background:#fff;
+            max-width:600px;
+            margin:50px auto;
+            padding:30px;
+            border-radius:10px;
+            box-shadow:0 4px 10px rgba(0,0,0,0.2);
+      }
+      .btn-submit{
+        background-color:#42A5F5;
+        color:#fff;
+        transition: background-color 0.3s ease;
+      }
+      .btn-submit:hover{
+        background-color:#1E88E5;
+        color:#fff;
+      }
+      #agreement{
+          margin-left:10px;
+          margin-right:10px;
+          border-radius:50%;
+      }
+      .alreadyhaveaccount{
+            text-align:center;
+            margin-top:10px;
+      }
+      .alreadyhaveaccount a{
+        text-decoration:none;
+        transition: all 0.3s ease;
+      }
+      .alreadyhaveaccount a:hover{
+        text-decoration:underline;
+      }
+
+  </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="form-card">
+          <h2 class="form-title">Registration</h2>
+          <form th:action="@{/savejobseeker}" onsubmit="return getCheckPassword()" method="post" th:object="${jsdata}" enctype="multipart/form-data">
+            <div class="form-group mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" th:value="${jsdata.name}" id="name" name="name" class="form-control" placeholder="Enter full name">
+                <p th:each="err : ${#fields.errors('name')}" th:text="${err}" style="color:red;"></p> <!--  class="alert alert-danger"-->
+            </div>
+              <div class="form-group mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="text" th:value="${jsdata.email}" id="email" name="email" class="form-control" placeholder="Enter email address">
+                    <p th:each="err : ${#fields.errors('email')}" th:text="${err}" style="color:red;"></p>
+              </div>
+              <div class="form-group mb-3">
+                  <label for="contact" class="form-label">Contact number</label>
+                  <input type="text" th:value="${jsdata.contact}" id="contact" name="contact" class="form-control" placeholder="Enter contact number">
+                    <p th:each="err : ${#fields.errors('contact')}" th:text="${err}" style="color:red;"> </p>
+              </div>
+              <div class="form-group mb-3">
+                  <label for="address" class="form-label">Address</label>
+                 <textarea class="form-control" th:value="${jsdata.address}" id="address" name="address" placeholder="Enter your address"></textarea>
+                  <p th:each="err : ${#fields.errors('address')}" th:text="${err}" style="color:red;"> </p>
+              </div>
+              <div class="row mb-3">
+                  <div class="form-group col-lg-6 col-sm-12 mb-3" >
+                      <label class="form-label" for="profile_picture">Profile Picture</label>
+                      <input type="file"  class="form-control" id="profile_picture" name="profile_picture" required>
+<!--                      <p th:each="err : ${#fields.errors('profile_picture')}" th:text="${err}" style="color:red;"> </p>-->
+                  </div>
+                  <div class="form-group col-lg-6 col-sm-12 ">
+                      <label class="form-label" for="resume">Resume(Optional)</label>
+                      <input type="file" class="form-control" id="resume" name="resume">
+                  </div>
+              </div>
+              <div class="row mb-3">
+                  <div class="form-group col-lg-6 col-sm-12 mb-3 ">
+                      <label for="password" class="form-label">Create Password</label>
+                      <input type="text" class="form-control" id="password" name="password" placeholder="Enter password">
+                  </div>
+                  <div class="form-group col-lg-6 col-sm-12 ">
+                      <label for="confirm-password" class="form-label">Confirm Password</label>
+                      <input type="text" class="form-control" id="confirm-password" name="confirm-password" placeholder="Enter confirm password">
+                      <p id="err_confirmpassword" style="color:red;"></p>
+                  </div>
+              </div>
+              <div class="form-group mb-3">
+                  <label for="skills" class="form-label">Skills</label>
+                  <input type="text" id="skills" name="skills" class="form-control" placeholder="Enter your skills (comma separated)">
+              </div>
+              <div class="form-group mb-3">
+                  <input type="checkbox" id="agreement" name="agreement" >I agree to abide by all terms and policies related to this registration.
+              </div>
+              <button type="submit"  class="btn btn-submit w-100">Submit</button>
+          </form>
+            <div class="alreadyhaveaccount">
+                <p>Already have an account?<a href="#">Login</a></p>
+            </div>
+        </div>
+    </div>
+    <script th:src="@{jsfolder/script.js}"></script>
+</body>
+</html>
