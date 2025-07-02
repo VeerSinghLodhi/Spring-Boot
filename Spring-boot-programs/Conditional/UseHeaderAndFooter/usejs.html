@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Use JS (Inline And External)</title>
+    <style>
+        img{
+            border-radius:50%;\
+            
+        }
+    </style>
+</head>
+<body>
+<!--Inline JS-->
+<!--<script>-->
+<!--    alert("Veer");-->
+<!--    console.log("Veer Singh Lodho");-->
+<!--</script>-->
+
+<!--External JS Path-->
+<img th:src="@{pictures/img1.jpg}" />
+
+<script th:src="@{javascript/script.js}"></script>
+</body>
+</html>
