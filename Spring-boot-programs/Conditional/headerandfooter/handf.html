@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Header And Footer</title>
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+  <div id="head1" th:fragment="siteheader">
+    <header class="bg-primary text-white">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <i class="fas fa-globe me-2"></i>
+            <span>Website Name</span>
+          </a>
+          <!-- Mobile Toggle Button -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Navigation Links -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a href="#" class="nav-link text-white">
+                  <i class="fas fa-home me-1"></i> Home
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link text-white">
+                  <i class="fas fa-info-circle me-1"></i> About
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link text-white">
+                  <i class="fas fa-envelope me-1"></i> Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+  </div>
+  <div th:fragment="sitefooter">
+  <footer class="sfooter">
+    <h2>&copy; All Right Reserved</h2>
+  </footer>
+  </div>
+</body>
+</html>
