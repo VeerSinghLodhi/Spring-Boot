@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        .form-container {
+            background-color: white;
+            width: 360px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .form-container h1 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .form-container p {
+            color: gray;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .form-container input, .form-container select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .form-container button {
+            width: 100%;
+            background-color: #4a4bbd;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #3a3b99;
+        }
+
+        .form-container .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .form-container .checkbox-container input {
+            margin-right: 10px;
+        }
+
+        .form-container small {
+            font-size: 12px;
+            color: gray;
+        }
+
+        .form-container small a {
+            color: #4a4bbd;
+            text-decoration: none;
+        }
+
+        .form-container small a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<div class="form-container">
+    <h1>Welcome to our project</h1>
+    <p>Manage your workflow</p>
+    <form>
+        <input type="text" placeholder="Last name" name="lastName" required>
+        <input type="text" placeholder="First name" name="firstName" required>
+        <select name="role" required>
+            <option value="" disabled selected>Choose your role</option>
+            <option value="admin">Admin</option>
+            <option value="editor">Editor</option>
+            <option value="viewer">Viewer</option>
+        </select>
+
+        <input type="email" placeholder="Email" name="email" required>
+        <input type="password" placeholder="Password (6 characters minimum)" name="password" minlength="6" required>
+        <button type="submit">Create account</button>
+        <div class="checkbox-container">
+            <input type="checkbox" name="terms" id="terms" required>
+            <label for="terms">I agree to be bound by the project <a href="#">service terms</a></label>
+        </div>
+
+    </form>
+    <small>See our <a href="#">privacy policy</a> for more information</small>
+</div>
+</body>
+</html>

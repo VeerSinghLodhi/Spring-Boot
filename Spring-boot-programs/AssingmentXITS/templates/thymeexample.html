@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <h1 th:text="${data}"></h1>
+  <div th:with="a=10">
+    <h1 th:text="'Value of A is ' +${a}"></h1>
+  </div>
+</body>
+</html>

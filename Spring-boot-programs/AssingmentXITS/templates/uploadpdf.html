@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload PDF</title>
+</head>
+<body>
+    <form action="/savepdf" method="post" enctype="multipart/form-data">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name">
+      </div>
+      <div>
+        <label for="data">Upload Resume PDF</label>
+        <input type="file" id="data" name="data">
+      </div>
+      <input type="submit">
+    </form>
+</body>
+</html>

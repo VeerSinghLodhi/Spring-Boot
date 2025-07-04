@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <h1 th:with="a=10,b=20,c=${a}+${b}">
+  <h2 th:text="'Sum is ' + ${c}"></h2>
+  </h1>
+</body>
+</html>

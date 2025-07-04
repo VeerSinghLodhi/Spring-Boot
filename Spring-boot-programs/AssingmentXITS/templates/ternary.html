@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+  <p th:text="${isactive}?'Active':'Inactive'" th:style="${isactive}?'color:blue; font-weight:bold':'color:red'"></p>
+  <h1 th:text="${elvis ?: 'Result'}"></h1>
+  <h1 th:if="${ifcondition}=='yes'">Yes</h1>
+  <h1 th:unless="${ifcondition}=='yes'">No</h1>
+    <div th:switch="${ifcondition}">
+        <h1 th:case="'yes'">Sagar</h1>
+        <h1 th:case="'no'">Damoh</h1>
+        <h1 th:case="*">Veer</h1>
+    </div>
+</body>
+</html>

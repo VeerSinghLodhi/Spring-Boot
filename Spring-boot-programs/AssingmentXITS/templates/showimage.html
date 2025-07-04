@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Show All Images</title>
+</head>
+<body>
+  <table border="2">
+    <thead>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Image</th>
+    </thead>
+    <tbody>
+      <tr th:each="d :${data}">
+          <td th:text="${d.id}"></td>
+          <td th:text="${d.name}"></td>
+          <td><a th:href="@{showimage/id/{id}(id=${d.id})}"><img th:src="@{showimage/id/{id}(id=${d.id})}"></a></td>
+<!--        <td><a href="/showimage/id/{id}(id=${d.id})"><img th:src="@{showimage/id/{id}(id=${d.id})}"></a></td>-->
+
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

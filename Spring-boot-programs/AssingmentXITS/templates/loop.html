@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <span th:text="${lang}">
+
+    </span>
+    <span th:each="t : ${lang}">
+        <ul>
+            <li>
+                <span th:text="${t}"></span>
+            </li>
+        </ul>
+    </span>
+    <table>
+        <tr th:each="user, status : ${lang}">
+            <td th:text="${status.index} +1"></td>
+            <td th:text="${status.count}"></td>
+            <td th:text="${user}"></td>
+        </tr>
+    </table>
+    <ul>
+        <li th:each="lag, stat : ${lang}"
+        th:text="${lag}"
+        th:style="${stat.even} ? 'color:teal;' : 'color:red;'"li>
+<!--        th:style="${stat.first} ? 'font-size:35px;' : 'font-size:20px   '"></li>-->
+    </ul>
+</body>
+</html>

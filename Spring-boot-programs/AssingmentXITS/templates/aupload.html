@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment Upload</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+            background-color:#fff;
+        }
+        .container{
+            max-width:420px;
+            width:100%;
+            background-color:#ffffff;
+            border:2px solid #000;
+            border-radius:14px;
+            padding:30px;
+        }
+        .container h2{
+            text-align:center;
+            font-size:35px;
+            margin-bottom:20px;
+        }
+        .container label{
+            display:block;
+            font-size:20px;
+            padding-bottom:12px;
+        }
+        .veer{
+            margin:14px;
+        }
+
+        .container input{
+            width:100%;
+            border-radius:8px;
+            height:35px;
+            padding-left:20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <b><h2>Welcome to our project</h2></b>
+        <form method="post" action="/saveuser" enctype="multipart/form-data">
+            <div class="veer">
+                <label for="fname">First Name</label>
+                <input type="text"  name="fname" id="fname" required placeholder="first name">
+            </div>
+            <div class="veer">
+                <label for="lname">Last Name</label>
+                <input type="text"  name="lname" id="lname" required placeholder="last name">
+            </div>
+            <div class="veer">
+                <label for="file">Role</label>
+                <input type="file"  name="file" id="file" required >
+            </div>
+            <div class="veer">
+                <label for="email">Email</label>
+                <input type="email"  name="email" id="email" required placeholder="email">
+            </div>
+            <div class="veer">
+                <label for="password">Password</label>
+                <input type="password"  name="password" id="password" required placeholder="enter password">
+            </div>
+            <button type="submit">Create account</button>
+        </form>
+    </div>
+</body>
+</html>
